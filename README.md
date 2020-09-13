@@ -11,5 +11,5 @@ to successfully perform ES deployment kindly update below value in variables.tf
 2. Secret_key
 3. your public IP for SSH access
 
-once server is up kindly use below command to access elastic search
+once server is up kindly login to server using ssh_key and use below command to access elastic search
 curl --cacert /tmp/cert_blog/certs/ca/ca.crt -u elastic:`awk '{print $4}' /tmp/password.txt | tail -2` 'https://node1.elastic.test.com:9200/_cat/nodes?v'
